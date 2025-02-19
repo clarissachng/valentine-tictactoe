@@ -1,0 +1,91 @@
+:root {
+    --darkpink1: #e64e74;
+    --pink: #ffb3c6;
+    --lightpink1: #ffc2d1;
+    --lightpink2: #ffe5ec;
+}
+
+@font-face {
+    font-family: 'rainyhearts';
+    src: url('../../assets/fonts/rainyhearts.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    text-align: center;
+    font-family: 'rainyhearts', sans-serif;
+    background: url("../../assets/pink-bg.png") center/cover no-repeat;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    color: var(--darkpink1);
+}
+
+a {
+    display: inline-block;
+    background-color: #ffebf1;
+    border: 2px solid var(--darkpink1);
+    color: var(--darkpink1);
+    text-decoration: none;
+    border-radius: 2vw;
+    width: 35vw;
+    padding: 2.5vw 4.5vw;
+    font-size: 8vw;
+    align-content: center;
+    height: auto;
+}
+a:hover {
+    transform: scale(1.15);
+    transition: ease 0.25s;
+}
+.msg-card {
+    display: flex;
+    width: 60vw;
+    height: 85vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw;
+    background: rgba(255, 255, 255, 0.4);
+    border: 2px solid var(--darkpink1);
+    border-radius: 20px;
+}
+
+.bunny-animation img {
+    height: 26vw;
+}
+
+.vibrate-1 {
+	animation: vibrate-1 1.5s linear infinite both;
+}
+
+
+ @keyframes vibrate-1 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}

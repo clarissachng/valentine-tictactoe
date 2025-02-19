@@ -1,0 +1,75 @@
+:root {
+    --darkpink1: #e64e74;
+    --darkpink2: #ff8fab;
+    --pink: #ffb3c6;
+    --lightpink1: #ffc2d1;
+    --lightpink2: #ffe5ec;
+}
+
+@font-face {
+    font-family: 'rainyhearts';
+    src: url('../../assets/fonts/rainyhearts.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    display: flex;
+    text-align: center;
+    font-family: 'rainyhearts', sans-serif;
+    background: url("../../assets/pink-bg.png") center/cover no-repeat;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100%;
+    color: var(--darkpink1);
+  }
+
+  #board {
+    display: grid;
+    grid-template-columns: repeat(3, 27vw);
+    grid-template-rows: repeat(3, 27vw);
+    gap: 3px;
+    justify-content: center;
+    /* border: 1px solid black; */
+    margin: 12vw 0 5vw;
+}
+.cell {
+    width: 27vw;
+    height: 27vw;
+    border: 1px solid #ff9fb7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    background: radial-gradient(white, transparent);
+}
+
+.player-container {
+    display: flex;
+    gap: 5vw;
+    background: rgba(255, 255, 255 ,0.7);
+    justify-content: center;
+    border-radius: 5vw;
+    margin-bottom: 5vw;
+    width: 85vw;
+}
+
+.player-icon {
+    display: flex;
+    gap: 4vw;
+    align-items: center;
+}
+
+.player-icon img {
+    height: 13vw;
+}
+
+.game-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
