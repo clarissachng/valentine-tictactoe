@@ -1,0 +1,102 @@
+:root {
+  --darkpink1: #e64e74;
+  --darkpink2: #ff8fab;
+  --pink: #ffb3c6;
+  --lightpink1: #ffc2d1;
+  --lightpink2: #ffe5ec;
+}
+
+@font-face {
+  font-family: 'rainyhearts';
+  src: url('./assets/fonts/rainyhearts.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  text-align: center;
+  font-family: 'rainyhearts', sans-serif;
+  background: url("./assets/pink-bg.png") center/cover no-repeat;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100%;
+}
+
+h2.header {
+  color: var(--darkpink1);
+  font-size: 15vw;
+  margin: 5vw 10vw 0;
+}
+
+a {
+  display: inline-block;
+  background-color: var(--lightpink2);
+  border: 2px solid var(--darkpink1);
+  color: var(--darkpink1);
+  text-decoration: none;
+  border-radius: 2vw;
+  width: 35vw;
+  padding: 2.5vw 4.5vw;
+  font-size: 8vw;
+  align-content: center;
+  height: auto;
+}
+a:hover {
+  transform: scale(1.15);
+  transition: ease 0.25s;
+}
+
+img.main-img {
+  height: 35vw;
+  margin-bottom: 5vw;
+}
+
+.fade-in-bottom {
+	animation: fade-in-bottom 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+}
+
+
+ @keyframes fade-in-bottom {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.vibrate-1 {
+	animation: vibrate-1 1.5s linear infinite both;
+}
+
+
+ @keyframes vibrate-1 {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    transform: translate(2px, 2px);
+  }
+  80% {
+    transform: translate(2px, -2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
